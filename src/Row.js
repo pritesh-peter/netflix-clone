@@ -34,7 +34,7 @@ function Row({title, fetchUrl, isLargeRow}){
         if (trailerUrl) {
            setTrailerUrl(''); 
         } else{
-            movieTrailer(movie?.title || "" )
+            movieTrailer(movie?.title || movie?.name || "" )
             .then( (response) => {
                 console.log("----------");
                 console.log(response);
